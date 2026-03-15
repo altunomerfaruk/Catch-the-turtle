@@ -1,5 +1,7 @@
 import turtle
-
+import os
+from tkinter import PhotoImage
+from turtle import Turtle, Screen, Shape
 GameScreen = turtle.Screen()
 GameScreen.bgcolor("light blue")
 style = ('Courier', 30, 'italic')
@@ -15,6 +17,8 @@ def countdown(time):
         tospik.write("Click Screen", align='center', font=style)
         GameScreen.onclick(lambda x, y: countdown(30))
 
+
+#/////////////////////////////////////////////////////////////////   yukarısı
 tospik = turtle.Turtle()
 tospik.hideturtle()
 tospik.penup()
@@ -28,10 +32,24 @@ tospik2.speed(0)
 tospik2.setposition(0, top_height - top_height/5)
 tospik2.write(f"Skor: {skor}", align='center', font=style)
 
+#/////////////////////////////////////////////////////////////////// kurbik
+larger = PhotoImage(file="erase.gif").subsample(6, 6)
+GameScreen.addshape("larger", Shape("image", larger))
+tortoise = Turtle("larger")
+tortoise.stamp()
+tortoise.hideturtle()
 
 
 
 
+
+
+
+
+
+
+
+#/////////////////////////////////////////////////////////////////// Başlatma
 tospik.write("Click Screen", align='center', font=style)
 GameScreen.onclick(lambda x, y: countdown(30))
 
