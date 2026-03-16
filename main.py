@@ -38,14 +38,7 @@ GameScreen.addshape("larger", Shape("image", larger))
 tortoise = Turtle("larger")
 tortoise.stamp()
 tortoise.hideturtle()
-
-
-
-
-
-
-
-
+tortoise.onclick(1)
 
 
 
@@ -56,4 +49,3 @@ GameScreen.onclick(lambda x, y: countdown(30))
 
 
 GameScreen.mainloop()
-
